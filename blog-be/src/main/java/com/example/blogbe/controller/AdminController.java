@@ -63,7 +63,7 @@ public class AdminController {
         return ResponseEntity.ok(ApiResponse.success(articles));
     }
 
-    @GetMapping("/data-range")
+    @GetMapping("/date-range")
     public ResponseEntity<ApiResponse<List<ArticleResponse>>> getArticlesByDateRange(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate
