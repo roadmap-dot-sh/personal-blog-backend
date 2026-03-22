@@ -7,6 +7,7 @@
 
 package com.example.blogbe.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -27,7 +28,11 @@ public class ArticleResponse {
     private String id;
     private String title;
     private String content;
+
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate publishDate;
+
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate createdAt;
     private String summary;
     private int wordCount;

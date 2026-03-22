@@ -7,6 +7,7 @@
 
 package com.example.blogbe.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -36,13 +37,20 @@ public class Article {
     private String content;
 
     @Column(name = "publishing_date", nullable = false)
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate publishDate;
 
     @Column(name = "created_at")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate createdAt;
 
     @PrePersist
     protected void onCreate() {
-        createdAt = LocalDate.now();
+        if (createdAt == null) {
+            createdAt = LocalDate.now();
+        }
+        if (publishDate == null) {
+            publishDate = LocalDate.now();
+        }
     }
 }

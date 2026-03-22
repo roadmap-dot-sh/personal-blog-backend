@@ -55,7 +55,7 @@ public class ArticleMapper {
         Article article = new Article();
         article.setTitle(request.getTitle());
         article.setContent(request.getContent());
-        article.setPublishDate(request.getPublishingDate());
+        article.setPublishDate(request.getPublishDate());
 
         return article;
     }
@@ -89,6 +89,6 @@ public class ArticleMapper {
 
         article.setTitle(request.getTitle());
         article.setContent(request.getContent());
-        article.setPublishDate(request.getPublishingDate());
+        article.setPublishDate(request.getPublishDate());
     }
 }
