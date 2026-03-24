@@ -4,10 +4,10 @@ Build a personal blog to write and publish articles on various topics.
 
 Project URL: <a href="https://roadmap.sh/projects/personal-blog">https://roadmap.sh/projects/personal-blog</a>
 
-## Requirements
-
 You are required to build a personal blog where you can write and publish articles. The blog will have two sections: a
 guest section and an admin section.
+
+## Requirements
 
 <b>Guest Section</b> — A list of pages that can be accessed by anyone:
 
